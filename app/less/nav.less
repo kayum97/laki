@@ -1,0 +1,52 @@
+.style_nav(@bkg_clr, @clr, @hvr_bkg_color, @size: 17px, @rds: 3px) {
+	background-color: @bkg_clr;
+	color: @clr;
+	font-size: @size;
+	padding: 1%;
+	a {
+	   color: @clr;
+	   text-decoration: none;
+	   padding: .375rem .75rem;
+	   font-size: 25px;
+	}
+	li {
+        list-style-type: none;
+        display: inline;
+        cursor: pointer;
+        padding: .375rem .75rem;
+        border-radius: @rds;
+        &:hover {
+	        background-color: @hvr_bkg_color;
+	        color: @clr;
+	    }
+    }
+   
+    ul {
+        display: inline;
+        margin-left: 0;
+        padding-left: 0;
+        margin: 5px;
+
+        &.fr {
+            float: right;
+        }
+    }
+
+	
+}
+
+nav {
+	.style_nav(#6495ED, #fff, #4682B4);
+
+	&.dark {
+	   .style_nav(#343a40, #fff, #000);
+	}
+
+    &.white {
+	    .style_nav(#fff,  #000, #E6E6FA);
+	}
+
+	&.success {
+	    .style_nav(#228B22, #fff, #006400);
+	}
+}

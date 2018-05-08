@@ -1,0 +1,34 @@
+.style_btn(@bkg_clr, @clr, @hvr_bkg_color, @rds: 3px, @brd: none, @size: 20px) {
+	background-color: @bkg_clr;
+	color: @clr;
+	border-radius: @rds;
+	border: @brd;
+	font-size: @size;
+	padding: .375rem .75rem;
+	transition: .5s;
+
+	&:hover {
+	    background-color: @hvr_bkg_color;
+	    color: @clr;
+    }
+}
+
+.btn {
+	.style_btn(#6495ED,  #fff, #4682B4);
+
+     &_white {
+	    .style_btn(#fff,  #000, #E6E6FA);
+	}
+
+	&_dark {
+	    .style_btn(#343a40, #fff, #000);
+	}
+
+	&_success {
+	    .style_btn(#228B22, #fff, #006400);
+	}
+
+	&_danger {
+	    .style_btn(#FF0000, #fff, #8B0000);
+	}
+}
